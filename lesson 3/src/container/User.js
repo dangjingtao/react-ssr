@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {getUserInfo} from '../store/user';
 
 function User(props){
+    // 容错处理
     if(props.info.errMsg){
         return <h1>{props.info.errMsg}</h1>
     }

@@ -17,10 +17,10 @@ export const getUserInfo = server => {
             const { info } = res.data;
             console.log('info', info);
             dispatch(getInfo(info));
-        }).catch(e=>{
+        }).catch(e => {
             // 容错
             return dispatch(getInfo({
-                errMsg:e.message
+                errMsg: e.message
             }));
         })
     }
@@ -29,8 +29,8 @@ export const getUserInfo = server => {
 // 初始状态
 const defaultState = {
     info: {
-        name:'',
-        honor:''
+        name: '',
+        honor: ''
     }
 }
 

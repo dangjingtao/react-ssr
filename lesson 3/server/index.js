@@ -33,11 +33,7 @@ app.get('*', (req, res) => {
         }
     });
 
-    // try{
-    //     Promise.all(promises)
-    // }catch(e){
-    //     console.log('err',e)
-    // }
+
     // 4.等待所有的请求结束后，再返回渲染逻辑
     Promise.all(promises).then(data => {
         // react组件解析为html
@@ -62,8 +58,6 @@ app.get('*', (req, res) => {
                 </head>
             </html>
             `);
-    }).catch(e => {
-        res.send(`错误：${e}`);
     });
 
 });
